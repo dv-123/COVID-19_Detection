@@ -1,0 +1,248 @@
+study_id,subtlety,size,age,gender,x,y,state,position,diagnosis
+JPCLN001.png,5,15,53,Male,1634,692,malignant,l.upper lobe,lung cancer
+JPCLN002.png,5,30,78,Female,1614,1090,benign,l.upper lobe(S5),pulmonary hematoma
+JPCLN003.png,5,30,63,Female,1303,447,malignant,l.upper lobe(S1+2),lung cancer
+JPCLN004.png,5,14,68,Female,606,836,benign,r.upper lobe,Inflammatory mass
+JPCLN005.png,5,35,73,Female,1438,692,malignant,l.upper lobe(S3),lung cancer
+JPCLN006.png,5,14,64,Female,660,524,benign,r.upper lobe(S2),tuberculoma
+JPCLN007.png,5,18,69,Male,459,852,malignant,r.upper lobe(S3),lung cancer
+JPCLN008.png,5,10,44,Female,508,938,benign,r.lower lobe,granuloma
+JPCLN009.png,5,28,61,Female,1593,930,malignant,l.lower lobe(S6),lung cancer
+JPCLN010.png,5,25,60,Female,647,594,malignant,r.upper lobe(S2),lung cancer
+JPCLN011.png,5,20,68,Male,647,401,benign,r.upper lobe(S1),tuberculoma
+JPCLN012.png,5,37,80,Male,268,1136,malignant,r.lower lobe(S8),lung cancer
+JPCLN013.png,4,25,68,Male,1380,377,benign,l.upper lobe(S1+2),tuberculoma
+JPCLN014.png,4,20,66,Male,569,717,malignant,r.upper lobe(S3),lung cancer
+JPCLN015.png,4,16,61,Female,549,995,malignant,r.middle lobe,lung cancer
+JPCLN016.png,4,15,57,Male,619,647,malignant,r.upper lobe(S2),lung cancer(adenocarcinoma)
+JPCLN017.png,4,30,70,Female,533,758,malignant,r.lower lobe(S6),lung cancer(adenocarcinoma)
+JPCLN018.png,4,10,63,Male,1597,1471,malignant,l.lower lobe(S10),lung cancer
+JPCLN019.png,4,20,47,Female,393,893,malignant,r.lower lobe(S6),lung cancer
+JPCLN020.png,4,7,47,Female,479,918,malignant,r.lower lobe(S6),lung cancer
+JPCLN021.png,4,18,66,Female,1577,746,malignant,l.upper lobe(S3),lung cancer
+JPCLN022.png,4,17,53,Female,725,479,malignant,r.upper lobe,lung cancer
+JPCLN023.png,4,15,65,Female,553,1139,malignant,r.middle lobe(S4),lung cancer
+JPCLN024.png,4,15,59,Female,533,1118,benign,r.lower lobe,hamartoma
+JPCLN025.png,4,28,65,Female,451,1339,benign,r.lower lobe(S9-10),unknown
+JPCLN026.png,4,20,70,Male,492,680,benign,r.upper lobe(S2),lung abscess
+JPCLN027.png,4,21,46,Female,455,692,malignant,r.upper lobe(S2),lung cancer(bronchioloalveolar cell carcinoma)
+JPCLN028.png,4,15,60,Male,1499,1085,malignant,l.upper lobe(S4),lung cancer
+JPCLN029.png,4,20,73,Female,643,868,malignant,r.lower lobe(S6),lung cancer
+JPCLN030.png,4,20,62,Female,1430,410,benign,l.upper lobe(S3),Cryptococcosis
+JPCLN031.png,4,28,58,Female,1409,500,malignant,l.upper lobe,lung cancer
+JPCLN032.png,4,10,75,Male,590,893,malignant,r.upper lobe(S3),lung cancer
+JPCLN033.png,4,30,70,Female,594,713,malignant,r.upper lobe(S3),lung cancer(bronchioloalveolar cell carcinoma)
+JPCLN034.png,4,14,59,Female,451,602,benign,r.upper lobe(S2),tuberculoma
+JPCLN035.png,4,13,39,Male,1548,967,malignant,l.upper lobe(S4),lung cancer(adenocarcinoma)
+JPCLN036.png,4,20,47,Male,1618,430,benign,l.upper lobe(S1+2),tuberculoma
+JPCLN037.png,4,20,53,Female,680,389,malignant,r.upper lobe,lung cancer
+JPCLN038.png,4,20,68,Female,848,303,malignant,r.upper lobe(S2),lung cancer(adenocarcinoma)
+JPCLN039.png,4,10,46,Female,451,930,malignant,r.upper lobe,lung cancer
+JPCLN040.png,4,15,73,Male,1530,514,malignant,l.upper lobe(S1+2),lung cancer(adenocarcinoma)
+JPCLN041.png,4,15,51,Male,1634,627,malignant,left lung,lung cancer
+JPCLN042.png,4,32,55,Female,533,1004,malignant,r.lower lobe(S9),lung cancer
+JPCLN043.png,4,13,63,Female,600,1012,benign,r.lower lobe(S6),tuberculoma
+JPCLN044.png,4,10,76,Male,700,918,malignant,r.lower lobe(S6),lung cancer
+JPCLN045.png,4,15,69,Male,680,266,malignant,r.upper lobe(S1),lung cancer(adenocarcinoma)
+JPCLN046.png,4,20,51,Male,1528,381,malignant,l.upper lobe(S1+2),lung cancer(squamous cell carcinoma)
+JPCLN047.png,4,12,78,Male,410,1393,malignant,r.lower lobe(S9),lung cancer(adenocarcinoma)
+JPCLN048.png,4,18,74,Female,516,1147,benign,r.middle lobe,unknown
+JPCLN049.png,4,13,55,Male,483,692,benign,r.upper lobe(S2),tuberculoma
+JPCLN050.png,4,20,68,Female,582,569,malignant,r.upper lobe(S2-S3),lung cancer
+JPCLN051.png,3,25,64,Female,524,586,malignant,r.upper lobe(S3),lung cancer(adenocarcinoma)
+JPCLN052.png,3,30,76,Female,836,881,malignant,r.lower lobe(S6),lung cancer(adenocarcinoma)
+JPCLN053.png,3,18,78,Male,573,520,malignant,r.upper lobe(S1),lung cancer
+JPCLN054.png,3,26,58,Female,533,746,malignant,r.upper lobe(S2),lung cancer(adenocarcinoma)
+JPCLN055.png,3,8,63,Female,1458,397,benign,l.upper lobe(S1+2),susp. sclerosing hemangioma
+JPCLN056.png,3,12,50,Female,553,725,malignant,r.upper lobe,lung cancer
+JPCLN057.png,3,12,64,Female,524,705,malignant,r.upper lobe(S2),lung cancer
+JPCLN058.png,3,15,37,Male,1716,959,benign,l.lower lobe(S6),pulmonary tuberculosis
+JPCLN059.png,3,27,70,Female,565,377,malignant,r.upper lobe(S1),lung cancer(adenocarcinoma)
+JPCLN060.png,3,28,50,Female,1390,1194,benign,l.lower lobe,unknown
+JPCLN061.png,3,14,74,Male,1610,967,benign,left lung,granuloma
+JPCLN062.png,3,15,41,Female,1618,934,malignant,l.lower lobe(S6),lung cancer(adenocarcinoma)
+JPCLN063.png,3,20,61,Male,466,812,malignant,r.middle lobe,lung cancer
+JPCLN064.png,3,10,65,Male,1614,1524,malignant,left lung,lung cancer
+JPCLN065.png,3,23,64,Male,541,1696,malignant,r.lower lobe(S9),lung cancer
+JPCLN066.png,3,8,35,Male,406,741,benign,r.upper lobe(S2),pulmonary tuberculosis
+JPCLN067.png,3,13,49,Female,1663,864,malignant,left lung,metastasis of colon cancer
+JPCLN068.png,3,30,70,Male,728,344,benign,r.upper lobe(S1),tuberculoma
+JPCLN069.png,3,12,58,Female,410,1040,malignant,r.middle lobe(S4),lung cancer
+JPCLN070.png,3,25,63,Male,733,1233,benign,r.middle lobe(S5),organiging pneumonia
+JPCLN071.png,3,15,69,Female,1499,557,malignant,l.upper lobe,lung cancer
+JPCLN072.png,3,15,75,Female,401,778,malignant,r.upper lobe,lung cancer
+JPCLN073.png,3,15,75,Male,1708,1004,malignant,l.upper lobe(S4),lung cancer(squamous cell carcinoma)
+JPCLN074.png,3,18,57,Male,1503,860,malignant,left lung,metastasis of colon cancer
+JPCLN075.png,3,12,52,Female,1643,709,benign,l.upper lobe(S3),lung abscess
+JPCLN076.png,3,20,75,Male,332,1364,malignant,r.middle lobe(S4),lung cancer
+JPCLN077.png,3,12,52,Female,508,1024,malignant,r.lower lobe(S6),lung cancer
+JPCLN078.png,3,11,44,Male,1638,668,benign,l.upper lobe,granuloma
+JPCLN079.png,3,10,28,Female,1589,864,benign,l.lower lobe,inflammatory mass
+JPCLN080.png,3,10,52,Female,451,918,malignant,r.upper lobe,lung cancer
+JPCLN081.png,3,21,64,Female,1446,832,malignant,l.upper lobe(S4),lung cancer(bronchioloalveolar cell carcinoma)
+JPCLN082.png,3,20,46,Female,459,950,malignant,r.middle lobe(S4),lung cancer(adenocarcinoma)
+JPCLN083.png,3,18,46,Male,1733,1507,malignant,l.lower lobe,lung cancer
+JPCLN084.png,3,60,59,Female,1340,854,malignant,left lung,lung cancer(bronchioloalveolar cell carcinoma)
+JPCLN085.png,3,16,69,Female,602,688,malignant,r.upper lobe,lung cancer
+JPCLN086.png,3,15,67,Male,582,451,malignant,r.upper lobe(S1),lung cancer
+JPCLN087.png,3,20,44,Male,631,1176,benign,r.middle lobe(S4),susp.tuberculoma
+JPCLN088.png,3,18,64,Female,414,1327,malignant,right lung,lung cancer
+JPCLN089.png,3,14,43,Male,1540,451,benign,l.upper lobe,inflammatory mass
+JPCLN090.png,3,20,62,Male,1421,1106,malignant,l.lower lobe(S6),lung cancer(adenocarcinoma)
+JPCLN091.png,3,25,76,Male,508,1380,malignant,r.lower lobe,lung cancer
+JPCLN092.png,3,12,53,Male,1647,864,malignant,l.upper lobe(S3),lung cancer(bronchioloalveolar cell carcinoma)
+JPCLN093.png,3,12,78,Male,758,311,malignant,r.upper lobe(S1),lung cancer(adenocarcinoma)
+JPCLN094.png,3,10,53,Male,516,623,benign,r.upper lobe,granuloma
+JPCLN095.png,3,6,64,Female,676,455,malignant,r.upper lobe(S2),lung cancer
+JPCLN096.png,3,10,37,Female,430,1016,benign,r.middle lobe(S4),Cryptococcosis
+JPCLN097.png,3,20,61,Male,1778,1147,malignant,l.lower lobe(S9),lung cancer
+JPCLN098.png,3,15,75,Male,729,406,benign,r.upper lobe(S1),tuberculoma
+JPCLN099.png,3,10,63,Female,524,504,malignant,r.upper lobe(S2),lung cancer(adenocarcinoma)
+JPCLN100.png,3,9,71,Female,1606,315,benign,l.upper lobe,granuloma
+JPCLN101.png,2,14,35,Male,1692,520,benign,l.upper lobe,inflammatory mass
+JPCLN102.png,2,5,21,Female,393,483,benign,r.upper lobe(S2),tuberculoma
+JPCLN103.png,2,15,73,Male,688,238,malignant,r.upper lobe(S1),lung cancer
+JPCLN104.png,2,21,69,Male,504,311,malignant,r.upper lobe(S1),lung cancer(bronchioloalveolar cell carcinoma)
+JPCLN105.png,2,30,63,Female,590,1471,malignant,r.lower lobe(S10),lung cancer(adenocarcinoma)
+JPCLN106.png,2,18,?,Male,246,1233,malignant,r.lower lobe,lung cancer
+JPCLN107.png,2,9,54,Male,1688,1159,benign,left lung,granuloma
+JPCLN108.png,2,30,59,Female,737,1475,malignant,r.lower lobe(S10),lung cancer
+JPCLN109.png,2,15,79,Female,504,995,malignant,right lung,metastasis of colon cancer
+JPCLN110.png,2,20,54,Male,1606,1065,malignant,l.lower lobe(S6-S8),lung cancer(adenocarcinoma)
+JPCLN111.png,2,8,60,Male,381,1311,benign,r.middle lobe(S4),susp. inflammatory mass
+JPCLN112.png,2,17,73,Male,1339,1364,malignant,l.lower lobe(S10),lung cancer(small cell carcinoma)
+JPCLN113.png,2,22,58,Female,1434,1397,malignant,l.lower lobe(S10),lung canceror metastasis
+JPCLN114.png,2,20,76,Female,447,762,malignant,r.lower lobe(S6),lung cancer(adenocarcinoma)
+JPCLN115.png,2,23,41,Male,528,1630,benign,r.lower lobe(S10),pulmonary hematoma
+JPCLN116.png,2,18,63,Female,1496,244,malignant,l.upper lobe(S1+2),lung cancer
+JPCLN117.png,2,12,?,Female,377,1045,malignant,r.upper lobe,lung cancer
+JPCLN118.png,2,15,61,Male,590,348,malignant,r.upper lobe(S1),lung cancer(adenosquamous carcinoma)
+JPCLN119.png,2,10,69,Female,401,639,benign,r.upper lobe,inflammatory mass
+JPCLN120.png,2,13,69,Male,1733,1380,malignant,left lung,lung cancer
+JPCLN121.png,2,10,78,Male,508,1126,benign,r.middle lobe,granuloma
+JPCLN122.png,2,13,57,Female,1651,836,benign,l.upper lobe(S4),unknown
+JPCLN123.png,2,15,57,Male,1706,1252,benign,l.lower lobe,calcified granuloma
+JPCLN124.png,2,15,39,Female,438,1413,benign,r.lower lobe(S7),pneumonia
+JPCLN125.png,2,15,47,Female,549,528,malignant,r.upper lobe(S2),lung cancer
+JPCLN126.png,2,20,67,Male,1180,1282,malignant,l.lower lobe(S10),lung cancer(large cell carcinoma)
+JPCLN127.png,2,11,58,Female,504,1024,benign,r.middle lobe,Inflammatory mass
+JPCLN128.png,2,20,62,Female,614,1376,malignant,r.lower lobe(S8),lung cancer(adenocarcinoma)
+JPCLN129.png,2,21,53,Male,1720,1065,malignant,l.lower lobe(S6),lung cancer(bronchioloalveolar cell carcinoma)
+JPCLN130.png,1,30,65,Male,1335,1163,malignant,l.lower lobe(S6),lung cancer
+JPCLN131.png,1,22,72,Female,1651,942,malignant,l.lower lobe(S8),lung cancer(adenocarcinoma)
+JPCLN132.png,1,22,48,Female,627,533,malignant,r.upper lobe,lung cancer
+JPCLN133.png,1,30,62,Female,1360,1593,malignant,l.lower lobe(S10),lung cancer
+JPCLN134.png,1,16,54,Female,893,1405,malignant,r.lower lobe,metastatic lung cancer
+JPCLN135.png,1,10,67,Male,627,1057,benign,r.lower lobe(S6),tuberculoma
+JPCLN136.png,1,15,45,Female,940,1062,benign,r.lower lobe(S7),sclerosing hemangioma
+JPCLN137.png,1,10,76,Female,410,815,benign,r.upper lobe(S3),tuberculoma
+JPCLN138.png,1,8,52,Female,1508,602,benign,l.upper lobe(S1+2),susp. inflammatory mass
+JPCLN139.png,1,12,41,Male,647,320,benign,r.upper lobe(S1),tuberculoma
+JPCLN140.png,1,12,47,Female,1528,1339,malignant,left lung,metastasis of ovarian cancer
+JPCLN141.png,1,10,50,Male,794,346,benign,r.upper lobe(S1),tuberculoma
+JPCLN142.png,1,10,65,Male,586,643,benign,r.upper lobe,granuloma
+JPCLN143.png,1,10,53,Male,766,430,malignant,r.upper lobe(S1),lung cancer
+JPCLN144.png,1,12,76,Female,1480,506,benign,l.upper lobe(S3),sclerosing hemangioma
+JPCLN145.png,1,10,49,Female,401,602,malignant,r.upper lobe(S3),lung cancer(adenocarcinoma)
+JPCLN146.png,1,12,54,Male,508,537,benign,r.upper lobe(S2),pulmonary tuberculosis
+JPCLN147.png,1,11,68,Female,537,1356,malignant,right lung,metastasis of colon cancer
+JPCLN148.png,1,18,74,Female,1593,1270,benign,l.upper lobe(S5),organizing pneumonia
+JPCLN149.png,1,28,50,Female,846,1186,benign,r.lower lobe,hamartoma
+JPCLN150.png,1,15,51,Female,1544,1409,malignant,l.lower lobe(S8),lung cancer(adenocarcinoma)
+JPCLN151.png,1,14,37,Female,1520,1364,malignant,l.lower lobe,metastasis of uterine cancer
+JPCLN152.png,1,10,56,Male,1323,1438,benign,l.lower lobe(S10),susp. hamartoma
+JPCLN153.png,1,10,64,Male,1708,1122,malignant,l.lower lobe,lung cancer
+JPCLN154.png,1,8,75,Female,660,688,malignant,r.upper lobe(S1),susp. lung metastasis
+JPCNN001.png,,,30,Female,,,non-nodule,,
+JPCNN002.png,,,62,Male,,,non-nodule,,
+JPCNN003.png,,,70,Female,,,non-nodule,,
+JPCNN004.png,,,52,Male,,,non-nodule,,
+JPCNN005.png,,,25,Male,,,non-nodule,,
+JPCNN006.png,,,44,Male,,,non-nodule,,
+JPCNN007.png,,,72,Male,,,non-nodule,,
+JPCNN008.png,,,75,Male,,,non-nodule,,
+JPCNN009.png,,,71,Female,,,non-nodule,,
+JPCNN010.png,,,54,Male,,,non-nodule,,
+JPCNN011.png,,,61,Male,,,non-nodule,,
+JPCNN012.png,,,42,Male,,,non-nodule,,
+JPCNN013.png,,,48,Female,,,non-nodule,,
+JPCNN014.png,,,62,Male,,,non-nodule,,
+JPCNN015.png,,,72,Female,,,non-nodule,,
+JPCNN016.png,,,49,Male,,,non-nodule,,
+JPCNN017.png,,,76,Female,,,non-nodule,,
+JPCNN018.png,,,46,Female,,,non-nodule,,
+JPCNN019.png,,,39,Female,,,non-nodule,,
+JPCNN020.png,,,24,Male,,,non-nodule,,
+JPCNN021.png,,,79,Female,,,non-nodule,,
+JPCNN022.png,,,70,Male,,,non-nodule,,
+JPCNN023.png,,,49,Male,,,non-nodule,,
+JPCNN024.png,,,59,Female,,,non-nodule,,
+JPCNN025.png,,,68,Male,,,non-nodule,,
+JPCNN026.png,,,60,Male,,,non-nodule,,
+JPCNN027.png,,,78,Female,,,non-nodule,,
+JPCNN028.png,,,32,Female,,,non-nodule,,
+JPCNN029.png,,,80,Female,,,non-nodule,,
+JPCNN030.png,,,35,Female,,,non-nodule,,
+JPCNN031.png,,,48,Male,,,non-nodule,,
+JPCNN032.png,,,30,Male,,,non-nodule,,
+JPCNN033.png,,,68,Male,,,non-nodule,,
+JPCNN034.png,,,31,Male,,,non-nodule,,
+JPCNN035.png,,,41,Male,,,non-nodule,,
+JPCNN036.png,,,42,Male,,,non-nodule,,
+JPCNN037.png,,,62,Male,,,non-nodule,,
+JPCNN038.png,,,21,Female,,,non-nodule,,
+JPCNN039.png,,,64,Male,,,non-nodule,,
+JPCNN040.png,,,51,Female,,,non-nodule,,
+JPCNN041.png,,,70,Male,,,non-nodule,,
+JPCNN042.png,,,37,Female,,,non-nodule,,
+JPCNN043.png,,,52,Female,,,non-nodule,,
+JPCNN044.png,,,35,Male,,,non-nodule,,
+JPCNN045.png,,,27,Male,,,non-nodule,,
+JPCNN046.png,,,69,Male,,,non-nodule,,
+JPCNN047.png,,,61,Female,,,non-nodule,,
+JPCNN048.png,,,46,Male,,,non-nodule,,
+JPCNN049.png,,,76,Male,,,non-nodule,,
+JPCNN050.png,,,57,Male,,,non-nodule,,
+JPCNN051.png,,,39,Female,,,non-nodule,,
+JPCNN052.png,,,66,Female,,,non-nodule,,
+JPCNN053.png,,,59,Male,,,non-nodule,,
+JPCNN054.png,,,59,Male,,,non-nodule,,
+JPCNN055.png,,,70,Male,,,non-nodule,,
+JPCNN056.png,,,58,Male,,,non-nodule,,
+JPCNN057.png,,,68,Male,,,non-nodule,,
+JPCNN058.png,,,43,Female,,,non-nodule,,
+JPCNN059.png,,,57,Female,,,non-nodule,,
+JPCNN060.png,,,59,Male,,,non-nodule,,
+JPCNN061.png,,,64,Male,,,non-nodule,,
+JPCNN062.png,,,89,Female,,,non-nodule,,
+JPCNN063.png,,,39,Male,,,non-nodule,,
+JPCNN064.png,,,51,Female,,,non-nodule,,
+JPCNN065.png,,,62,Male,,,non-nodule,,
+JPCNN066.png,,,72,Female,,,non-nodule,,
+JPCNN067.png,,,59,Female,,,non-nodule,,
+JPCNN068.png,,,83,Male,,,non-nodule,,
+JPCNN069.png,,,59,Female,,,non-nodule,,
+JPCNN070.png,,,63,Female,,,non-nodule,,
+JPCNN071.png,,,84,Female,,,non-nodule,,
+JPCNN072.png,,,34,Male,,,non-nodule,,
+JPCNN073.png,,,50,Female,,,non-nodule,,
+JPCNN074.png,,,59,Female,,,non-nodule,,
+JPCNN075.png,,,16,Male,,,non-nodule,,
+JPCNN076.png,,,62,Male,,,non-nodule,,
+JPCNN077.png,,,35,Female,,,non-nodule,,
+JPCNN078.png,,,58,Female,,,non-nodule,,
+JPCNN079.png,,,72,Male,,,non-nodule,,
+JPCNN080.png,,,66,Female,,,non-nodule,,
+JPCNN081.png,,,16,Female,,,non-nodule,,
+JPCNN082.png,,,59,Male,,,non-nodule,,
+JPCNN083.png,,,33,Female,,,non-nodule,,
+JPCNN084.png,,,53,Female,,,non-nodule,,
+JPCNN085.png,,,68,Female,,,non-nodule,,
+JPCNN086.png,,,47,Male,,,non-nodule,,
+JPCNN087.png,,,77,Female,,,non-nodule,,
+JPCNN088.png,,,54,Male,,,non-nodule,,
+JPCNN089.png,,,50,Male,,,non-nodule,,
+JPCNN090.png,,,68,Female,,,non-nodule,,
+JPCNN091.png,,,81,Male,,,non-nodule,,
+JPCNN092.png,,,70,Female,,,non-nodule,,
+JPCNN093.png,,,41,Male,,,non-nodule,,
