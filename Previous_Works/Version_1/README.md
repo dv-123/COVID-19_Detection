@@ -1,1 +1,1 @@
-This is the first version of the project that gives the initial approach that was followed during the preperation of the project.
+This is the first version of the project that gives the initial approach that was followed during the preperation of the project. This folder includes the initial approach that was taken for the segmentation of the Chest Radiographs.
