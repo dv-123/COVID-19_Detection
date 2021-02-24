@@ -38,16 +38,19 @@ Dataset Segmentation → (total images 247 and after augmentation 988 images i.e
 Once the dataset is downloaded and the masking model is trained the actual dataset which is to be masked and then used for training the classifiers is divided in the following format folder wise.
 
 ![](Images/Figure_1.PNG)
+
 Figure1: Flow diagram of folder splitting for dataset
 
 Also the Data division Percentage and for the whole dataset in the above folders and for training can be represented by following pie charts.
 
 ![](Images/Figure_2.PNG)
+
 Figure 2: Pie chart showing Data division into Test, Train and Validation percentage wise
 
 The main focus of this project/paper is to analyse the performance of the Deep Learning models with various add-ons to the original model and with different variations in those add-ons. A simple pipeline is then proposed to specify and analyse all those add ons with the provided Deep Learning model which can be explained easily by the image given below.
 
 ![](Images/Figure_3.PNG)
+
 Figure3: Flow diagram showing the proposed pipeline for classification
 
 So, as we can see from the above image we will be working on these many add ons and features with our deep learning models and then analysing the performance of each of these levels on basis of various parameters. Lets first explain the algorithm part of this whole process and then analyse the results.
@@ -75,6 +78,7 @@ In the proposed pipeline data preprocessing is done two times. First when we nee
 The masking model is a C-GAN model trained on a pix to pix algorithm, the dataset consist of 247 images in total and was split into train test and validation folders, the raw dataset consist of lung masks of left and right lungs in separate folders and source images in separate folders, these masks of lungs are then first overlapped to make a single mask containing both lungs and then these masks are concatenated with the respective source images vertically. After this the dataset is prepared and some random cropping and jittering is done in the dataset for variations before feeding the images to the main masking model. A sample of the image is shown below.
 
 ![](Images/Figure_4.PNG)
+
 Figure 4: Sample of input Dataset to the masking model
 
 - Data preprocessing Classification Model Training
@@ -88,6 +92,7 @@ Also, the images selected from the Normal and Pneumonia folders were 341 and 347
 Then the images are masked using the trained masked model and some feature enhancement like Histogram equalization then applying CLAHE and then at last thresholding is done during the masking process. Image before and after the processing is shown below:
 
 ![](Images/Figure_5.PNG)
+
 Figure 5(a): Sample of original Chest X ray dataset Figure 5(b) Sample of Chest X ray after image enhancement in pre processing
 
 After this the image is masked and saved the masked dataset divided into two folders namely, test folder and train folder, which contains 92 images of covid-19, 91 images of Normal and 97 images of Pneumonia chest x-ray samples in the test folder and 250 images of each types in the training folder.
@@ -95,6 +100,7 @@ After this the image is masked and saved the masked dataset divided into two fol
 Then the 250 images of Covid-19, Normal and Pneumonia are augmented and increased 4 times i.e. 1000 image samples by mirroring the images with reference axis placed vertically and then a little bit augmentation in the images by using Affine Transformation and rotation, the parameters were set at the scale of 10^-2 resulting in small change in image without affecting the pattern of corona virus in lungs. The resulting augmentation resulted in a 4 times increase in dataset. The Sample of this augmentation on the masked image is given below:
 
 ![](Images/Figure_6.PNG) 
+
 Figure6: Sample of the same image and its transition during the image augmentation process from left to right
 
 After this all preprocessing the final dataset for training the classification network is trained with 1000 images of each category of Covid-19, Normal and Pneumonia for training and 92 images of Covid-19, 91 images of normal, and 97 images of Pneumonia for Testing.
@@ -104,6 +110,7 @@ _2.2 Image Masking using C-GAN_
 For training the masking network we used the Conditional-GANs and implemented an algorithm proposed in paper named &quot;Image-to-Image Translation with Conditional Adversarial Networks&quot; **[4]**. Basic GAN or Generative Adversarial Networks **[5]** are aimed to train neural networks that can generate new realistic information and can generate very convincing photorealistic images. In GANs there are special kinds of networks used to generate the data which are some kind of combinational neural network that can generate data which looks very photorealistic to the eyes. The GAN network has two parts in total, which is a Generator and a Discriminator. A Generator network is a network which is used to generate the photorealistic data/images, whereas the discriminator is a network which is used to classify between the generated image from the network and the original image from the training dataset into fake and original images. Basically, these two networks work for and against each other. The basic working of the GAN model can be explained by the following flow diagram.
 
 ![](Images/Figure_7.PNG)
+
 Figure7: Basic GAN Flow diagram 
 
 We feed a number of image samples to the Generator and the Generator will try to create a new version of these images which are never seen before. This generated image is then sent to the discriminator which is then trained to classify that the image given to it is a real or a generated image. After the classification of the image the loss function will be used to do the tuning of the parameters. If the discriminator classify the image as fake and was also a fake image then the loss function will act to improve the weights of the generator in order to generate a image which is more close to the related original image and if the discriminator classifies the image wrong then the loss function will act to improve the weights of discriminator so that it can classify the images more accurately. Basically, there are two loss functions one for generator and one for the discriminator which compete to make their respective networks better over the whole course of training. More detailed explanation of the GANs and it&#39;s loss functions can be seen in its original paper **[5]**.
@@ -111,6 +118,7 @@ We feed a number of image samples to the Generator and the Generator will try to
 For Generating the image masks related to the particular input chest X – ray images, we used a special type of GANs known as Conditional GANs. In Conditional GANs instead of feeding thousands of images to a generator and expecting it to come out with new results, we actually convert specific kinds of images to other kinds of images. As in our Conditional GAN network we are feeding in the chest X-rays as the input to the generator and we are expecting a lung mask as an output form the Generator. Here the input image which is a chest X-ray is given with the mask image which is a ground label or true image in a pair to the input of the C-GAN model. The image of chest X-ray is fed as input to the Generator model so that it can create an output image from it which we want to be a Chest mask of that input image. Now the generated mask and the input chest x-ray image is given to the discriminator network along with the original mask image of the input chest x-ray image. In the Discriminator the pair of the conditional image and the original mask and the conditional image and the generated mask is given to its input separately, these image pairs are then classified by the discriminator as the chest x-ray and original mask pairs or not. If discriminator classifies right then loss function will be used to update the weights of the generator network and if the classification by the discriminator network is wrong then the loss function of the discriminator will update the weights of the discriminator network to improve the results. These networks will compete against each other during the training process in order to give better results over the course of training. A simple diagram given below will explain the working of the Conditional GANs easier to understand.
 
 ![](Images/Figure_8.PNG)
+
 Figure8: Conditional GAN flow diagram
 
 For Segmenting the Chest x-ray images we are using a pix2pix algorithm with Conditional GANs which was originally published in the paper &quot;Image-to-Image translation with Conditional Adversarial Networks&quot; **[4]**. In this Algorithm for Generator a modified U-Net architecture was used. Some of the key points of the generator network from the research paper implementation work **[6]** are:
@@ -129,6 +137,7 @@ And the for the Generator loss following key points are mentioned:
 The training procedure for the Generator Network in this paper can be easily understood by the figure given below.
 
 ![](Images/Figure_9.PNG)
+
 Figure9: Flow diagram for training the Generator model
 
 Also, the discriminator architecture is taken from the same paper **[4]** and some of the key points related to the discriminator mentioned in the paper implementation work **[6]** is :
@@ -152,11 +161,13 @@ And for the Discriminator Loss Function the following key points were mentioned:
 The training procedure for the Discriminator Network in this paper can be easily understood by the figure given below.
 
 ![](Images/Figure_10.PNG)
+
 Figure10: Flow diagram for training the classification Model
 
 Below are the samples of the outputs which were obtained after training the Generator Network of the C-GAN by this algorithm.
 
 ![](Images/Figure_11.PNG)
+
 Figure11: Samples of the generated mask by the masking model along with the actual mask and input x-ray image
 
 _2.3 Image Classification_
@@ -176,7 +187,7 @@ And we also made a Simple Convolution Network for reference and to check how bet
 
 The whole pipeline with these blocks is shown in the figure below.
 
-![](RackMultipart20210224-4-p09i7p_html_4fc5c685a01364c1.jpg)
+![](Images/Figure_12.PNG)
 
 Figure12: compacted flow diagram for the proposed pipeline
 
@@ -186,19 +197,21 @@ The basic approach is to evaluate each and every block separately and combined. 
 
 The first block in this pipeline is a feature extraction block which consists of two major parts, one is the Deep Convolutional Neural Network model and other is a Computer Vision algorithm which is used to extract useful information from the image which is given to it. Given below is a diagram representing the elements in block.
 
-![](RackMultipart20210224-4-p09i7p_html_89ba9e37db5d2ac4.jpg)
+![](Images/Figure_13.PNG)
 
 Figure13: Flow diagram explaining the elements in the Feature Extraction block
 
 The Classification model is basically a Deep Convolutional Neural Network Model which is pre trained and performed best in classification of images available on ImageNet. Once the model is downloaded, then to perform transfer learning on these models, we replace all the flatten layers of the model according to the information displayed in the table given below.
 
-![](RackMultipart20210224-4-p09i7p_html_cbdb1cbeaaa55a57.png)
+![](Images/Table_1.PNG)
 
 Table1: Table labeling the features of self added 4 fully connected flatten layers in the transfer learning model at the end
 
 Once the whole network is trained then it is evaluated on a validation dataset. Also, the features from the fc3 layer of the hybrid model are taken out to later concatenate them with the extracted feature from the other part of the feature extraction block.
 
-The second part of this block uses the computer vision algorithm/s to extract the key-points from the Image. Majorly we wanted to detect the blobs for particular patterns in the input image so we decided to test two algorithms for this SIFT (Scale Invariant Feature Transform) [link to paper] and BRISK (Binary Robust Invariant Scalable Key-points) [link to paper]. The visual representation of key-points detected by these algorithms are represented by a sample picture given below ![](RackMultipart20210224-4-p09i7p_html_ea300f1bb041eb76.png)
+The second part of this block uses the computer vision algorithm/s to extract the key-points from the Image. Majorly we wanted to detect the blobs for particular patterns in the input image so we decided to test two algorithms for this SIFT (Scale Invariant Feature Transform) [link to paper] and BRISK (Binary Robust Invariant Scalable Key-points) [link to paper]. The visual representation of key-points detected by these algorithms are represented by a sample picture given below.
+
+![](Images/Figure_14.PNG)
 
 Figure14: Images visually represented the detected features by SIFT and BRISK algorithm on a sample x-ray image
 
@@ -210,13 +223,17 @@ Now these extracted features from both parts are combined to form a dataset with
 
 The next part of this pipeline is a multilayer perceptron model, this is a Deep Neural Network model which takes in the concatenated features from the previous blocks and then based on the assigned labels to these input features we train the network to predict the correct labels to the given information. The input of the deep learning model is a vector of length 384 with 256 features coming from the transfer learning model&#39;s second last or fc3 layer and the remaining 128 features coming from the 128 cluster mean points of the extracted features using SIFT or BRISK algorithm. The basic information about the used model in the study is given in the table below.
 
-Table2: Table mentioning the layer description of the multilayer perceptron model ![](RackMultipart20210224-4-p09i7p_html_6554609a3282da91.png)
+![](Images/Table_2.PNG)
+
+Table2: Table mentioning the layer description of the multilayer perceptron model 
 
 2.3.3 Final layer for evaluation and prediction
 
 The final layer consists of an evaluation layer which has either the output layer from the model using SoftMax activation function for classification or either of the svm, XG-boost or random forest ML algorithm to classify the final images into the three labeled classes. We then see whether the ML algorithms helped with the specific transfer learning model in the given pipeline to improve its classification results at last or not.
 
-There are some general predefined variables (parameters, hyper-parameters, constants) by us which are used during training of the models in this pipeline. A list of those is given in a table given below. ![](RackMultipart20210224-4-p09i7p_html_8acdd24650099939.png)
+There are some general predefined variables (parameters, hyper-parameters, constants) by us which are used during training of the models in this pipeline. A list of those is given in a table given below.
+
+![](Images/Table_3.PNG)
 
 Table3: Table listing the various parameters used during the classification model training process
 
@@ -230,11 +247,11 @@ Discriminator loss →
 
 Following is the function used to build the discriminator loss.
 
-![](RackMultipart20210224-4-p09i7p_html_e844610bd8b0c22f.png)
+![](Images/Figure_15.PNG)
 
 Figure15: Code for Discriminator loss function
 
-![](RackMultipart20210224-4-p09i7p_html_f2a4043bd79f3f4d.png)
+![](Images/Figure_16.PNG)
 
 Figure16. Graph for discriminator loss conversion for C-GAN
 
@@ -244,7 +261,7 @@ Generator loss →
 
 The Generator is the main model which we are optimizing and training through this method of C-GAN image to image translation. Following is the code used for making the Generator loss function.
 
-![](RackMultipart20210224-4-p09i7p_html_e210444da1e77b86.png)
+![](Images/Figure_17.PNG)
 
 Figure 17. Code for Generator Loss function
 
@@ -252,7 +269,7 @@ Each part of this loss function is optimized as the number of epochs increases. 
 
 Generator GAN loss →
 
-![](RackMultipart20210224-4-p09i7p_html_418cb92d7310b3ac.png)
+![](Images/Figure_18.PNG)
 
 Figure 18. Graph of Generator GAN loss with increase of training Epochs
 
@@ -260,7 +277,7 @@ As we can see from the above graph at the beginning the discriminator was not tr
 
 Generator L1 loss →
 
-![](RackMultipart20210224-4-p09i7p_html_671ddc4e12118701.png)
+![](Images/Figure_19.PNG)
 
 Figure 19. Graph of Generator L1 loss with increase in training Epochs
 
@@ -268,7 +285,7 @@ As we can see that the generator L1 loss is the difference between the target im
 
 Generator total loss →
 
-![](RackMultipart20210224-4-p09i7p_html_4123669b6f26970c.png)
+![](Images/Figure_20.PNG)
 
 Figure 20. Total Generator Loss Graph with increase in Epochs
 
@@ -410,15 +427,13 @@ Before moving on to further discussion, the following is some definition of the 
 
 **3.3** For this discussion consider the following table:
 
-|
- | Predicted Negative(PN) - 0 | Predicted Positive (PP) - 1 |
-| --- | --- | --- |
-| Actual Negative (AN) - 0 | True Negative (TN) | False Positive (FP) |
-| Actual Positive (AP) - 1 | False Negative (FN) | True Positive (TP) |
+![](Images/Table_14.PNG)
 
 Table 14. Distribution Table/confusion for mathematical analysis
 
 Now from the above table we can define some following terms and the terms that are used in the observation table.
+
+![](Images/Equations.PNG)
 
 Now as we can observe from the above tables for accuracy and F1 scores (average) that the VGG-19 and VGG-16 were the two models which performed best on the test dataset and also performed well during training on the validation dataset. We will be focusing more on the F1 scores for drawing the final conclusions as we can see from the explanation above is more suitable for observing this type of classification problems and also we need much precise data in the form of F1 scores.
 
@@ -440,7 +455,7 @@ VGG-19→
 
 The Classification report of the VGG-19 model at the best level in the pipeline as described in table 11 is given below.
 
-![](RackMultipart20210224-4-p09i7p_html_a1584c22ad9e4924.png)
+![](Images/Figure_21.PNG)
 
 Figure 21. Confusion matrix and analysis table for VGG-19 best performance level in pipeline
 
@@ -448,7 +463,7 @@ VGG-16 →
 
 The Classification report of the VGG-16 model at the best level in the pipeline as described in table 11 is given below.
 
-![](RackMultipart20210224-4-p09i7p_html_75eb3f8e39f1d175.png)
+![](Images/Figure_22.PNG)
 
 Figure 22. Confusion matrix and analysis table for VGG-16 best performance level in pipeline
 
