@@ -38,19 +38,16 @@ Dataset Segmentation → (total images 247 and after augmentation 988 images i.e
 Once the dataset is downloaded and the masking model is trained the actual dataset which is to be masked and then used for training the classifiers is divided in the following format folder wise.
 
 ![](Images/Figure_1.PNG)
-
 Figure1: Flow diagram of folder splitting for dataset
 
 Also the Data division Percentage and for the whole dataset in the above folders and for training can be represented by following pie charts.
 
 ![](Images/Figure_2.PNG)
-
 Figure 2: Pie chart showing Data division into Test, Train and Validation percentage wise
 
 The main focus of this project/paper is to analyse the performance of the Deep Learning models with various add-ons to the original model and with different variations in those add-ons. A simple pipeline is then proposed to specify and analyse all those add ons with the provided Deep Learning model which can be explained easily by the image given below.
 
 ![](Images/Figure_3.PNG)
-
 Figure3: Flow diagram showing the proposed pipeline for classification
 
 So, as we can see from the above image we will be working on these many add ons and features with our deep learning models and then analysing the performance of each of these levels on basis of various parameters. Lets first explain the algorithm part of this whole process and then analyse the results.
@@ -78,7 +75,6 @@ In the proposed pipeline data preprocessing is done two times. First when we nee
 The masking model is a C-GAN model trained on a pix to pix algorithm, the dataset consist of 247 images in total and was split into train test and validation folders, the raw dataset consist of lung masks of left and right lungs in separate folders and source images in separate folders, these masks of lungs are then first overlapped to make a single mask containing both lungs and then these masks are concatenated with the respective source images vertically. After this the dataset is prepared and some random cropping and jittering is done in the dataset for variations before feeding the images to the main masking model. A sample of the image is shown below.
 
 ![](Images/Figure_4.PNG)
-
 Figure 4: Sample of input Dataset to the masking model
 
 - Data preprocessing Classification Model Training
@@ -91,16 +87,14 @@ Also, the images selected from the Normal and Pneumonia folders were 341 and 347
 
 Then the images are masked using the trained masked model and some feature enhancement like Histogram equalization then applying CLAHE and then at last thresholding is done during the masking process. Image before and after the processing is shown below:
 
-Figure 5(a): Sample of original Chest X ray dataset Figure 5(b) Sample of Chest X ray after image ![](Images/Figure_5.PNG)
-
-enhancement in pre processing
+![](Images/Figure_5.PNG)
+Figure 5(a): Sample of original Chest X ray dataset Figure 5(b) Sample of Chest X ray after image enhancement in pre processing
 
 After this the image is masked and saved the masked dataset divided into two folders namely, test folder and train folder, which contains 92 images of covid-19, 91 images of Normal and 97 images of Pneumonia chest x-ray samples in the test folder and 250 images of each types in the training folder.
 
 Then the 250 images of Covid-19, Normal and Pneumonia are augmented and increased 4 times i.e. 1000 image samples by mirroring the images with reference axis placed vertically and then a little bit augmentation in the images by using Affine Transformation and rotation, the parameters were set at the scale of 10^-2 resulting in small change in image without affecting the pattern of corona virus in lungs. The resulting augmentation resulted in a 4 times increase in dataset. The Sample of this augmentation on the masked image is given below:
 
-1. Sample image b) transition state c) final augmented image ![](Images/Figure_6.PNG)
-
+![](Images/Figure_6.PNG) 
 Figure6: Sample of the same image and its transition during the image augmentation process from left to right
 
 After this all preprocessing the final dataset for training the classification network is trained with 1000 images of each category of Covid-19, Normal and Pneumonia for training and 92 images of Covid-19, 91 images of normal, and 97 images of Pneumonia for Testing.
@@ -109,14 +103,14 @@ _2.2 Image Masking using C-GAN_
 
 For training the masking network we used the Conditional-GANs and implemented an algorithm proposed in paper named &quot;Image-to-Image Translation with Conditional Adversarial Networks&quot; **[4]**. Basic GAN or Generative Adversarial Networks **[5]** are aimed to train neural networks that can generate new realistic information and can generate very convincing photorealistic images. In GANs there are special kinds of networks used to generate the data which are some kind of combinational neural network that can generate data which looks very photorealistic to the eyes. The GAN network has two parts in total, which is a Generator and a Discriminator. A Generator network is a network which is used to generate the photorealistic data/images, whereas the discriminator is a network which is used to classify between the generated image from the network and the original image from the training dataset into fake and original images. Basically, these two networks work for and against each other. The basic working of the GAN model can be explained by the following flow diagram.
 
-Figure7: Basic GAN Flow diagram ![](RackMultipart20210224-4-p09i7p_html_9c1b64d0fc4b9231.jpg)
+![](Images/Figure_7.PNG)
+Figure7: Basic GAN Flow diagram 
 
 We feed a number of image samples to the Generator and the Generator will try to create a new version of these images which are never seen before. This generated image is then sent to the discriminator which is then trained to classify that the image given to it is a real or a generated image. After the classification of the image the loss function will be used to do the tuning of the parameters. If the discriminator classify the image as fake and was also a fake image then the loss function will act to improve the weights of the generator in order to generate a image which is more close to the related original image and if the discriminator classifies the image wrong then the loss function will act to improve the weights of discriminator so that it can classify the images more accurately. Basically, there are two loss functions one for generator and one for the discriminator which compete to make their respective networks better over the whole course of training. More detailed explanation of the GANs and it&#39;s loss functions can be seen in its original paper **[5]**.
 
 For Generating the image masks related to the particular input chest X – ray images, we used a special type of GANs known as Conditional GANs. In Conditional GANs instead of feeding thousands of images to a generator and expecting it to come out with new results, we actually convert specific kinds of images to other kinds of images. As in our Conditional GAN network we are feeding in the chest X-rays as the input to the generator and we are expecting a lung mask as an output form the Generator. Here the input image which is a chest X-ray is given with the mask image which is a ground label or true image in a pair to the input of the C-GAN model. The image of chest X-ray is fed as input to the Generator model so that it can create an output image from it which we want to be a Chest mask of that input image. Now the generated mask and the input chest x-ray image is given to the discriminator network along with the original mask image of the input chest x-ray image. In the Discriminator the pair of the conditional image and the original mask and the conditional image and the generated mask is given to its input separately, these image pairs are then classified by the discriminator as the chest x-ray and original mask pairs or not. If discriminator classifies right then loss function will be used to update the weights of the generator network and if the classification by the discriminator network is wrong then the loss function of the discriminator will update the weights of the discriminator network to improve the results. These networks will compete against each other during the training process in order to give better results over the course of training. A simple diagram given below will explain the working of the Conditional GANs easier to understand.
 
-![](RackMultipart20210224-4-p09i7p_html_e63c15ca36e3271.jpg)
-
+![](Images/Figure_8.PNG)
 Figure8: Conditional GAN flow diagram
 
 For Segmenting the Chest x-ray images we are using a pix2pix algorithm with Conditional GANs which was originally published in the paper &quot;Image-to-Image translation with Conditional Adversarial Networks&quot; **[4]**. In this Algorithm for Generator a modified U-Net architecture was used. Some of the key points of the generator network from the research paper implementation work **[6]** are:
@@ -134,8 +128,7 @@ And the for the Generator loss following key points are mentioned:
 
 The training procedure for the Generator Network in this paper can be easily understood by the figure given below.
 
-![](RackMultipart20210224-4-p09i7p_html_8d2f718158499551.jpg)
-
+![](Images/Figure_9.PNG)
 Figure9: Flow diagram for training the Generator model
 
 Also, the discriminator architecture is taken from the same paper **[4]** and some of the key points related to the discriminator mentioned in the paper implementation work **[6]** is :
@@ -158,14 +151,12 @@ And for the Discriminator Loss Function the following key points were mentioned:
 
 The training procedure for the Discriminator Network in this paper can be easily understood by the figure given below.
 
-![](RackMultipart20210224-4-p09i7p_html_82b2c2c03e8227ed.jpg)
-
+![](Images/Figure_10.PNG)
 Figure10: Flow diagram for training the classification Model
 
 Below are the samples of the outputs which were obtained after training the Generator Network of the C-GAN by this algorithm.
 
-1. Input image b) Ground Truth c) Predicted Image ![](RackMultipart20210224-4-p09i7p_html_29992de63fb5c7d8.png)
-
+![](Images/Figure_11.PNG)
 Figure11: Samples of the generated mask by the masking model along with the actual mask and input x-ray image
 
 _2.3 Image Classification_
