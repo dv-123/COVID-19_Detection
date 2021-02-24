@@ -4,3 +4,5 @@ database, B. van Ginneken, M.B. Stegmann, M. Loog,  Medical Image Analysis, 2006
 http://www.isi.uu.nl/Research/Databases/SCR/
 
 Note: The image dataset downloaded from the given source comes along with chest X-ray and their respective masks which are the joined Horizontally is "X-ray_Image:Binary_Mask" fassion using numpy in preprocessing code.
+
+Further the Dataset Folder is Devided into Train, Validation and Test folders with data distribution ratio of 60:20:20 or 3:1:1
