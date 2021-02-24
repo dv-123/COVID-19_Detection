@@ -1,3 +1,7 @@
 This folder constist of the Dataset Pre-processing part of the medical images.
 
 The given Dataset folder represents the source dataset which is being preprocessed and masked. Then the data is saved in the Classification folder, once it finishes the preprocessing step. The datset division into sub filders is explained in that folder's dataset folder itself.
+
+The Dataset_augmentation.ipynb is used to augment the COVID-19 masked Chest X-rays so that it's data san be increased 4 times to its original value to match the amount of data available with other dtaset i.e. Pneumonia and Normal or we can also select same number of dataset from Pneumonia and Normal dataset as that of COVID-19 but the total dataset will be vaer small which will not be useful for training the classification model. So, we followed the first approach of datset augmentation in one COVID-19 folder only to increase its amount for training and not others as they were present in abundence and we wanted to keep the data as clean as possible. Moreover, no augmented data was used in the test folder and only clean masked data was used so that we can see the actual performance of the model on the real time images which were not preprocessed in any means and not augmented also, only masked using the masking model trained earlier in binary mask generation.
+
+The model used for masking can be imported from the Binary mask generation folder's model folder.
