@@ -43,13 +43,13 @@ Figure1: Flow diagram of folder splitting for dataset
 
 Also the Data division Percentage and for the whole dataset in the above folders and for training can be represented by following pie charts.
 
-![](RackMultipart20210224-4-p09i7p_html_677725cf433e8a33.jpg)
+![](Images/Figure_2.PNG)
 
 Figure 2: Pie chart showing Data division into Test, Train and Validation percentage wise
 
 The main focus of this project/paper is to analyse the performance of the Deep Learning models with various add-ons to the original model and with different variations in those add-ons. A simple pipeline is then proposed to specify and analyse all those add ons with the provided Deep Learning model which can be explained easily by the image given below.
 
-![](RackMultipart20210224-4-p09i7p_html_6e3209ff59ff94a8.jpg)
+![](Images/Figure_3.PNG)
 
 Figure3: Flow diagram showing the proposed pipeline for classification
 
@@ -77,7 +77,7 @@ In the proposed pipeline data preprocessing is done two times. First when we nee
 
 The masking model is a C-GAN model trained on a pix to pix algorithm, the dataset consist of 247 images in total and was split into train test and validation folders, the raw dataset consist of lung masks of left and right lungs in separate folders and source images in separate folders, these masks of lungs are then first overlapped to make a single mask containing both lungs and then these masks are concatenated with the respective source images vertically. After this the dataset is prepared and some random cropping and jittering is done in the dataset for variations before feeding the images to the main masking model. A sample of the image is shown below.
 
-![](RackMultipart20210224-4-p09i7p_html_8b47968be40d90ab.png)
+![](Images/Figure_4.PNG)
 
 Figure 4: Sample of input Dataset to the masking model
 
@@ -91,7 +91,7 @@ Also, the images selected from the Normal and Pneumonia folders were 341 and 347
 
 Then the images are masked using the trained masked model and some feature enhancement like Histogram equalization then applying CLAHE and then at last thresholding is done during the masking process. Image before and after the processing is shown below:
 
-Figure 5(a): Sample of original Chest X ray dataset Figure 5(b) Sample of Chest X ray after image ![](RackMultipart20210224-4-p09i7p_html_cf5bbaec88a612d4.png)
+Figure 5(a): Sample of original Chest X ray dataset Figure 5(b) Sample of Chest X ray after image ![](Images/Figure_5.PNG)
 
 enhancement in pre processing
 
@@ -99,7 +99,7 @@ After this the image is masked and saved the masked dataset divided into two fol
 
 Then the 250 images of Covid-19, Normal and Pneumonia are augmented and increased 4 times i.e. 1000 image samples by mirroring the images with reference axis placed vertically and then a little bit augmentation in the images by using Affine Transformation and rotation, the parameters were set at the scale of 10^-2 resulting in small change in image without affecting the pattern of corona virus in lungs. The resulting augmentation resulted in a 4 times increase in dataset. The Sample of this augmentation on the masked image is given below:
 
-1. Sample image b) transition state c) final augmented image ![](RackMultipart20210224-4-p09i7p_html_4854b6733a8519e9.png)
+1. Sample image b) transition state c) final augmented image ![](Images/Figure_6.PNG)
 
 Figure6: Sample of the same image and its transition during the image augmentation process from left to right
 
