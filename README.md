@@ -1,6 +1,8 @@
 # COVID-19_Detection
 This Repository consists if works related to the detection of COVID-19 and related disease from Chest Radiographs by using Image Processing Techniques, Computer Vision and Machine Learning methods.
 
+Following is a Report format Explanation of this project.
+
 ______________________________________________________________________________________________________________________________________________________________________________
 
 
@@ -504,3 +506,15 @@ So, from the previous analysis on the whole proposed pipeline we came to the con
 **[14].** [**COVID-Net: A Tailored Deep Convolutional Neural Network Design for Detection of COVID-19 Cases from Chest X-Ray Images Linda Wang1,2,3\*, Zhong Qiu Lin1,2,3, and Alexander Wong1,2,3**](https://arxiv.org/pdf/2003.09871.pdf)
 
 **[15].** [**Detection of COVID-19 from Chest X-Ray Images Using Convolutional Neural Networks Boran Sekeroglu1 and Ilker Ozsahin2**](https://journals.sagepub.com/doi/10.1177/2472630320958376)
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+Note: A research paper is being prepared on the same project and all the work and sharing rights included in this project solely belongs to its contributers mentioned in the documents folder. Please do not use this project without citation of the paper and mentioning the contributors in the Refrences.
+
+
+
+
+
