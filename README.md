@@ -37,7 +37,7 @@ Dataset Segmentation → (total images 247 and after augmentation 988 images i.e
 
 Once the dataset is downloaded and the masking model is trained the actual dataset which is to be masked and then used for training the classifiers is divided in the following format folder wise.
 
-![](RackMultipart20210224-4-p09i7p_html_748226956c210a16.jpg)
+![](Images/Figure_1.PNG)
 
 Figure1: Flow diagram of folder splitting for dataset
 
