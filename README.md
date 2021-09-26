@@ -523,7 +523,7 @@ Note: A research paper is being prepared on the same project and all the work an
 > Prayas Thakur </br> 
 > Abhijit Bhattacharyya
 
-
-
-
+# Related Research Paper
+You can reffer to the research paper pulbished by the above contributors on this project by clicking on the link given below,
+(https://www.sciencedirect.com/science/article/pii/S1746809421007795)
 
