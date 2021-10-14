@@ -525,5 +525,5 @@ Note: A research paper is being prepared on the same project and all the work an
 
 # Related Research Paper
 You can reffer to the research paper pulbished by the above contributors on this project by clicking on the link given below,
-(will be updated after pre-proof reading procidure is completed)
+https://doi.org/10.1016/j.bspc.2021.103182
 
